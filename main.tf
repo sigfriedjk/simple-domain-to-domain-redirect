@@ -2,16 +2,13 @@ provider "aws" {
   region     = "us-east-1"
 }
 
-
 variable "left_host" {
   default = "source.com"
 }
 
-
 variable "right_host" {
   default = "target.com"
 }
-
 
 variable "hosted_zone" {
   default = "ABC123"
@@ -20,7 +17,6 @@ variable "hosted_zone" {
 variable "environment" {
   default = "main"
 }
-
 
 locals {
   s3_origin_id = "myS3Origin"
@@ -36,8 +32,6 @@ locals {
       }
     }]
 }
-
-
 
 
 resource "aws_s3_bucket" "website_bucket" {
